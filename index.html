@@ -3,36 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To MrSmart TV</title>
+    <title>MrSmart TV</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&family=Montserrat:wght@700&display=swap');
+
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #121212;
+            color: white;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #282c34;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        .container {
+
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 15px;
             text-align: center;
+            font-size: 24px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        h1 {
-            font-size: 3em;
-            margin: 0.5em 0;
+
+        header img {
+            height: 40px;
+            margin-right: 10px;
         }
-        p {
-            font-size: 1.5em;
-            margin: 0.5em 0;
+
+        .header-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header-lobster {
+            font-family: 'Lobster', cursive;
+        }
+
+        .header-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .card {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            cursor: pointer;
+            width: 180px;
+            height: 180px;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        .card:active {
+            transform: scale(0.95);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+            border-color: #ff9800;
+        }
+
+        .card img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .card-title {
+            padding: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media only screen and (max-width: 360px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
     </style>
 </head>
 <body>
+    <header class="header-lobster"> <!-- Change class to 'header-lobster' or 'header-montserrat' to test different fonts -->
+        <img src="https://i.ibb.co/MkmQCRr/Text-Pro-me-1665441dd0bc31-3.jpg" alt="MrSmart TV Logo">
+        MrSmart TV
+    </header>
+    
     <div class="container">
-        <h1>Welcome To MrSmart TV</h1>
-        <p>Your ultimate entertainment hub!</p>
+        <div class="card" onclick="window.open('http://mrsmarttv.shop/test/tataplay.php', '_blank')">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0a/af/98/0aaf9873-bcab-53cc-e0be-06e8833c44b9/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-85-220.png/246x0w.webp" alt="TATA PLAY">
+            <div class="card-title">TATA PLAY</div>
+        </div>
+        <div class="card" onclick="window.open('http://mrsmarttv.shop/test/jiotv.php', '_blank')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSRf_Kjc6Q70BwS2Dl7UuNA19aVTAh4V6zBuNgOCmAs0xsnNSs2IlFRoE&s=10" alt="JIO TV+">
+            <div class="card-title">JIO TV+</div>
+        </div>
+        
+        <div class="card" onclick="window.open('http://mrsmarttv.shop/test/tata.php', '_blank')">
+            <img src="https://i.ibb.co/HnrCDxM/Text-Pro-me-166659ffeaa5ab-2.jpg" alt="OPPLEX">
+            <div class="card-title">TATA TV</div>
+        </div>
+        
+        <div class="card" onclick="window.open('http://mrsmarttv.shop/test/jiotvbe.php', '_blank')">
+            <img src="https://i.ibb.co/Fnxhn6p/Jio-TV-1.png" alt="JIOTV.BE">
+            <div class="card-title">JIOTV.BE</div>
+        </div>
+        
+        <div class="card" onclick="window.open('http://mrsmarttv.shop/test/watch.php', '_blank')">
+            <img src="https://i.ibb.co/Bqyqq2z/Screenshot-2024-06-11-11-19-30-220-com-google-android-apps-photos.jpg" alt="WATCH INDIA">
+            <div class="card-title">WATCH INDIA</div>
+        </div>
+        
+        <div class="card" onclick="window.open('http://mrsmarttv.shop/test/ditto.php', '_blank')">
+            <img src="https://i.ibb.co/DwdKqV2/Text-Pro-me-16665cc38bc693-2.jpg" alt="OPPLEX">
+            <div class="card-title">Ditto TV</div>
+        </div>
+        
+        <div class="card" onclick="window.open('http://mrsmarttv.shop/test/opplex.php', '_blank')">
+            <img src="https://i.ibb.co/Jpr857J/Text-Pro-me-166657de357ee8-2.jpg" alt="OPPLEX">
+            <div class="card-title">OPPLEX</div>
+        </div>
+        
+        
+        
+        
+        
+        
     </div>
+    
+    <footer>
+        © 2024 MrSmart TV. All rights reserved.
+    </footer>
 </body>
 </html>
